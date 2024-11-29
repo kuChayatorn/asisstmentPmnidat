@@ -5,16 +5,16 @@ const Radui2 = () => {
     return (
         <div className="radio-input">
             <label className='text-center'>
-                <input value="value-1" name="value-radio" id="value-1" type="radio" />
-                <p>ผู้ป่วย</p>
+                <input value="value-1" name="value-radio" id="value-1" type="radio" defaultChecked />
+                <p className='text-base font-weight-[400]'>ผู้ป่วย</p>
             </label>
             <label className='text-center'>
                 <input value="value-2" name="value-radio" id="value-2" type="radio" />
-                <p>ผู้ใช้ชิดของผู้ป่วย</p>
+                <p className='text-base font-weight-[400]'>ผู้ใช้ชิดของผู้ป่วย</p>
             </label>
             <label className="text-center">
                 <input value="value-3" name="value-radio" id="value-3" type="radio" />
-                <p className='text-sm'>บุคลากรการแพทย์</p>
+                <p className='text-base font-weight-[400]'>บุคลากรการแพทย์</p>
             </label>
             <p className="selection"></p>
         </div >
