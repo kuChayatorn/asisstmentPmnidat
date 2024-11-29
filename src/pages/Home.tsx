@@ -1,0 +1,83 @@
+import React from 'react'
+import Radui2 from '../components/Radui2'
+import AmbulanceCallIcon from '/Ambulance-Call--Streamline-Ultimate.svg';
+import ContentPaperIcon from '/Content-Paper.svg';
+import HospitalIcon from '/Hospital.svg';
+import SmileIcon from '/Smiley.svg';
+const Home = () => {
+    return (
+        <div className='h-lvh w-full flex justify-center items-start flex-col'>
+            <div className='flex flex-col basis-2/5 bg-[url("/bg.png")] bg-cover bg-center w-full'>
+                <div className='m-5 border-2 border-blue-500 flex w-full h-[80px] p-[10px] gap-[17px]'>
+                    <div className="flex items-center justify-center rounded-md">
+                        <img src={SmileIcon} alt="Ambulance Call Icon" className="w-[60px] h-[60px] object-fill" />
+                    </div>
+                    <div className='bg-white rounded-full flex w-full h-[60px] justify-center items-center p-5'>
+                        <p className='text-base font-serif'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ
+                            เพื่อการดูแลสุขภาพของคุณครับ</p>
+                    </div>
+                </div>
+                <div className="bg-yellow-100 border border-yellow-300 rounded-lg shadow-md p-6 flex items-center justify-center max-w-md mx-10">
+                    <div className="text-center flex">
+                        <p className="text-lg font-bold text-yellow-700">
+                            คุณได้เริ่มต้นเส้นทางสำคัญสู่ชีวิตที่ดีขึ้นแล้ว!
+                        </p>
+                        <div className="flex justify-center mt-2">
+                            <span className="text-yellow-500 text-xl">✨</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div className='flex basis-3/5 w-full flex-col items-center'>
+                <div className='flex bg-white rounded-t-2xl w-full flex-col justify-start items-center p-5 mt-[-12px]'>
+                    {/* <Radio /> */}
+                    <Radui2 />
+                </div>
+                <p className='text-base text-blue-500'>คุณต้องการรับบริการด้านไหน</p>
+                <div className='flex w-full flex-col justify-between items-center gap-5 p-5'>
+                    <div className="flex h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
+                        {/* Icon Section */}
+                        <div className="flex items-center justify-center w-[80px] h-[80px] p-[10px] bg-white rounded-md mr-4">
+                            <img src={ContentPaperIcon} alt="Ambulance Call Icon" className="w-full h-full object-contain" />
+                        </div>
+
+                        {/* Text Section */}
+                        <div>
+                            <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
+                            <p className="text-blue-700 text-sm">Assessment</p>
+                        </div>
+                    </div>
+                    <div className="flex  h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
+                        {/* Icon Section */}
+                        <div className="flex items-center justify-center w-[80px] h-[80px] p-[10px] bg-white rounded-md mr-4">
+                            <img src={AmbulanceCallIcon} alt="Ambulance Call Icon" className="w-full h-full object-contain" />
+                        </div>
+
+                        {/* Text Section */}
+                        <div>
+                            <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
+                            <p className="text-blue-700 text-sm">Assessment</p>
+                        </div>
+                    </div>
+                    <div className="flex h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
+                        {/* Icon Section */}
+                        <div className="flex items-center justify-center w-[80px] h-[80px] p-[10px] bg-white rounded-md mr-4">
+                            <img src={HospitalIcon} alt="Ambulance Call Icon" className="w-full h-full object-contain" />
+                        </div>
+
+                        {/* Text Section */}
+                        <div>
+                            <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
+                            <p className="text-blue-700 text-sm">Assessment</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+export default Home
