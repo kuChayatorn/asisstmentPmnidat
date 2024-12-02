@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Radui2 from '../components/Radui2'
 import AmbulanceCallIcon from '/Ambulance-Call--Streamline-Ultimate.svg';
 import ContentPaperIcon from '/Content-Paper.svg';
@@ -6,12 +7,13 @@ import SmileIcon from '/Smiley.svg';
 const Home = () => {
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0'>
-            <div className='flex flex-col bg-[url("/bg.png")] bg-cover bg-center w-full items-center justify-center mb-[-12px]' style={{ height: 'calc(30% + 12px)' }}>
-                <div className='flex w-[342px] flex-col gap-[16px]'>
-                    <div className=' flex w-[100%] h-[60px] gap-[16px] items-center justify-center'>
+            <div className='flex flex-col bg-[url("/bg.png")] bg-cover bg-center w-full items-center justify-start mb-[-12px]' style={{ height: 'calc(30% + 12px)' }}>
+                <div className='flex w-[342px] flex-col gap-[16px] pt-14'>
+                    <div className=' flex w-[100%] h-[60px] gap-[16px] items-center justify-center z-[1]'>
                         <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[60x] h-[60px]" />
-                        <div className='bg-white rounded-full flex h-[60px] justify-center items-center text-center p-2'>
-                            <p className='text-base text-black font-serif text-[14px]'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ
+                        <div className='bg-[#FFF5CC] rounded-full flex h-[60px] justify-center items-center text-center flex-col p-4'>
+                            <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ</p>
+                            <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>
                                 เพื่อการดูแลสุขภาพของคุณครับ</p>
                         </div>
                     </div>
@@ -42,9 +44,10 @@ const Home = () => {
                             </div>
 
                             {/* Text Section */}
-                            <div>
-                                <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
-                                <p className="text-blue-700 text-sm">Assessment</p>
+                            <div >
+                                <Link to="/assist" style={{ textDecoration: "none" }}>
+                                    <p className="text-blue-700 font-medium">ทำแบบประเมิน Assessment</p>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex  h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
@@ -55,8 +58,7 @@ const Home = () => {
 
                             {/* Text Section */}
                             <div>
-                                <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
-                                <p className="text-blue-700 text-sm">Assessment</p>
+                                <p className="text-blue-700 font-medium">ติดต่อและปรึกษาสายด่วน</p>
                             </div>
                         </div>
                         <div className="flex h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
@@ -67,8 +69,7 @@ const Home = () => {
 
                             {/* Text Section */}
                             <div>
-                                <p className="text-blue-700 font-medium">ทำแบบประเมิน</p>
-                                <p className="text-blue-700 text-sm">Assessment</p>
+                                <p className="text-blue-700 font-medium">สถานพยาบาลบำบัดและฟื้นฟู</p>
                             </div>
                         </div>
                     </div>
