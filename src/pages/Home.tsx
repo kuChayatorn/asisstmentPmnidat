@@ -10,7 +10,7 @@ const Home = () => {
                 <div className='flex w-[342px] flex-col gap-[16px]'>
                     <div className=' flex w-[100%] h-[60px] gap-[16px] items-center justify-center'>
                         <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[60x] h-[60px]" />
-                        <div className='bg-white rounded-full flex h-[60px] justify-center items-center p-5'>
+                        <div className='bg-white rounded-full flex h-[60px] justify-center items-center text-center p-2'>
                             <p className='text-base text-black font-serif text-[14px]'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ
                                 เพื่อการดูแลสุขภาพของคุณครับ</p>
                         </div>
