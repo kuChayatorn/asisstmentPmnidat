@@ -13,7 +13,7 @@ const AssistIntroPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) =
                     <div className=' flex w-[100%] h-[60px] gap-[16px] items-end justify-center'>
                         <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[100px] h-[100px]" />
                         <div className=' rounded-full flex h-[60px] justify-center items-center text-center flex-col p-4'>
-                            <p className='font-sans text-lg leading-[22.4px] tracking-tight text-left decoration-slice font-bold'>
+                            <p className=' text-lg leading-[22.4px] tracking-tight text-left decoration-slice font-bold'>
                                 ก่อนเข้าสู่การทำ
                                 แบบประเมิน ASSIST</p>
                         </div>

@@ -13,8 +13,8 @@ const PersonalInformation = ({ handleNextPage, handlePrevPage }: PersonalInforma
                 <div className=' flex w-[100%] h-[60px] gap-[16px] items-center justify-center z-[1]'>
                     <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[60x] h-[60px]" />
                     <div className='bg-[#FFF5CC] rounded-full flex h-[60px] justify-center items-center text-center flex-col p-4'>
-                        <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ</p>
-                        <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>
+                        <p className=' text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ</p>
+                        <p className=' text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>
                             เพื่อการดูแลสุขภาพของคุณครับ</p>
                     </div>
                 </div>

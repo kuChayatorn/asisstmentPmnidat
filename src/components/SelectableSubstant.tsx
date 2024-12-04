@@ -32,7 +32,7 @@ const SelectableSubstant: React.FC<SelectableSubstantProp> = ({
             <p className="text-blue-800 text-[18px] font-bold leading-[21.6px] tracking-[-0.011em] text-center decoration-skip-ink-none">
                 {name}
             </p>
-            <p className="text-black text-xs font-sans">{description}</p>
+            <p className="text-black text-xs ">{description}</p>
         </label>
     );
 };

@@ -12,14 +12,14 @@ const Home = () => {
                     <div className=' flex w-[100%] h-[60px] gap-[16px] items-center justify-center z-[1]'>
                         <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[60x] h-[60px]" />
                         <div className='bg-[#FFF5CC] rounded-full flex h-[60px] justify-center items-center text-center flex-col p-4'>
-                            <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ</p>
-                            <p className='font-sans text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>
+                            <p className='text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>สวัสดีครับ! ยินดีต้อนรับเข้าสู่บริการ</p>
+                            <p className='text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice'>
                                 เพื่อการดูแลสุขภาพของคุณครับ</p>
                         </div>
                     </div>
                     <div className="bg-yellow-100 border border-yellow-300 rounded-lg shadow-md p-6 flex items-center justify-center max-w-md">
                         <div className="text-center flex">
-                            <p className="text-lg font-bold text-yellow-700">
+                            <p className="text-lg font-bold font-noto text-yellow-700">
                                 คุณได้เริ่มต้นเส้นทางสำคัญสู่ชีวิตที่ดีขึ้นแล้ว!
                             </p>
                             <div className="flex justify-center mt-2">
@@ -37,7 +37,7 @@ const Home = () => {
                     </div>
                     <p className='text-base text-blue-500 w-max-[342px] pt-5'>คุณต้องการรับบริการด้านไหน</p>
                     <div className='flex w-full flex-col justify-between items-center gap-5 py-5'>
-                        <div className="flex h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
+                        <Link to="/assist" className="flex h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
                             {/* Icon Section */}
                             <div className="flex items-center justify-center w-[80px] h-[80px] p-[10px] bg-white rounded-md mr-4">
                                 <img src={ContentPaperIcon} alt="Ambulance Call Icon" className="w-full h-full object-contain" />
@@ -45,11 +45,9 @@ const Home = () => {
 
                             {/* Text Section */}
                             <div >
-                                <Link to="/assist" style={{ textDecoration: "none" }}>
-                                    <p className="text-blue-700 font-medium">ทำแบบประเมิน Assessment</p>
-                                </Link>
+                                <p className="text-blue-700 font-medium">ทำแบบประเมิน Assessment</p>
                             </div>
-                        </div>
+                        </Link>
                         <div className="flex  h-[100px] items-center p-3 rounded-lg bg-blue-100 shadow-md cursor-pointer w-full mx-2 hover:bg-blue-200 transition">
                             {/* Icon Section */}
                             <div className="flex items-center justify-center w-[80px] h-[80px] p-[10px] bg-white rounded-md mr-4">

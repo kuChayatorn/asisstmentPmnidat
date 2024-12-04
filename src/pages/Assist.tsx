@@ -6,7 +6,7 @@ import AssistSubstanct from './AssistSubstanct';
 
 
 const Assist = () => {
-    const [page, setPage] = useState<number>(3);
+    const [page, setPage] = useState<number>(1);
     const handleNextPage = () => {
         setPage(page + 1);
     }
