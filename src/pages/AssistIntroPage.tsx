@@ -1,6 +1,7 @@
 import SmileIcon from '/Smiley.svg';
 import { Link } from 'react-router-dom';
 import { HiSpeakerWave } from "react-icons/hi2";
+import AvatarChat from '../components/AvatarChat';
 interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
@@ -10,14 +11,7 @@ const AssistIntroPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) =
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] h-full flex-col gap-[16px] pt-14 justify-center items-center z-[1]'>
                 <div className=' flex flex-col w-[100%] gap-[16px] bg-[#FFF5CC] items-center justify-start p-4 z-[1]'>
-                    <div className=' flex w-[100%] h-[60px] gap-[16px] items-end justify-center'>
-                        <img src={SmileIcon} alt="Ambulance Call Icon" className="flex w-[100px] h-[100px]" />
-                        <div className=' rounded-full flex h-[60px] justify-center items-center text-center flex-col p-4'>
-                            <p className=' text-lg leading-[22.4px] tracking-tight text-left decoration-slice font-bold'>
-                                ก่อนเข้าสู่การทำ
-                                แบบประเมิน ASSIST</p>
-                        </div>
-                    </div>
+                    <AvatarChat textLine1={"ก่อนเข้าสู่การทำ"} textLine2={"แบบประเมิน ASSIST"} bgColor={"bg-[#FFF5CC]"} />
                     <div className='flex flex-col'>
                         <p>
                             คําถามต่อไปนี้เกี่ยวกับประสบการณ์ของคุณในการใช้

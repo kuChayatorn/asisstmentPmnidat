@@ -1,5 +1,7 @@
 import React from 'react'
 import SmileIcon from '/Smiley.svg';
+import InputText from '../components/InputText';
+import InputOptions from '../components/InputOptions';
 
 interface PersonalInformationPageProps {
     handleNextPage: () => void;
@@ -18,46 +20,15 @@ const PersonalInformation = ({ handleNextPage, handlePrevPage }: PersonalInforma
                             เพื่อการดูแลสุขภาพของคุณครับ</p>
                     </div>
                 </div>
-                <div className='flex flex-col w-full items-center justify-start bg-white z-[1] gap-4'>
+                <form className='flex flex-col w-full items-center justify-start bg-transparent z-[1] gap-4'>
                     <h1>กรุณากรอกข้อมูลส่วนตัว</h1>
-                    <div className='flex flex-col w-full items-start justify-start '>
-                        <label htmlFor="name">ชื่อ-นามสกุล ของผู้ป่วย
-                            <input type="text" id="name" className='w-full border border-gray-300 rounded-md p-2 mt-2' />
-                        </label>
-                    </div>
-                    <div className='flex flex-col w-full items-start justify-start'>
-                        <p >ชื่อ-นามสกุล ของผู้ป่วย</p>
-                        <div className='flex flex-row w-full items-center justify-start gap-4 mt-2'>
-                            <div className="form-control">
-                                <label className="label cursor-pointer gap-4">
-                                    <input type="radio" name="radio-10" className="radio checked:bg-blue-500" defaultChecked />
-                                    <span className="label-text">เพศชาย</span>
-                                </label>
-                            </div>
-                            <div className="form-control">
-                                <label className="label cursor-pointer gap-4">
-                                    <input type="radio" name="radio-10" className="radio checked:bg-blue-500" defaultChecked />
-                                    <span className="label-text">เพศหญิง</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flex flex-col w-full items-start justify-start'>
-                        <label htmlFor="age" className='w-full'>อายุของผู้ป่วย
-                            <input type="text" id="age" className='w-full border border-gray-300 rounded-md p-2 mt-2' />
-                        </label>
-                    </div>
-                    <div className='flex flex-col w-full items-start justify-start'>
-                        <label htmlFor="email" className='w-full'>อีเมล หรือ เบอร์โทรศัพท์
-                            <input type="text" id="email" className='w-full border border-gray-300 rounded-md p-2 mt-2' />
-                        </label>
-                    </div>
-                    <div className='flex flex-col w-full items-start justify-start'>
-                        <label htmlFor="job" className='w-full'>อาชีพ (ไม่บังคับ)
-                            <input type="text" id="job" className='w-full border border-gray-300 rounded-md p-2 mt-2' />
-                        </label>
-                    </div>
-                </div>
+                    <InputText text="กรุณากรอกข้อมูลส่วนตัว" name="name" value={""} onChange={() => { }} required={false} />
+                    <InputOptions text='เพศโดยกำเนิน' name='gender' options={[{ text: 'เพศชาย', value: 'ชาย' }, { text: 'เพศหญิง', value: 'หญิง' }]} onChange={() => { }} />
+                    <InputOptions text='เพศสภาพ' name='sex' options={[{ text: 'เพศชาย', value: 'ชาย' }, { text: 'เพศหญิง', value: 'หญิง' }]} onChange={() => { }} />
+                    <InputText text="อายุของผู้ป่วย" name="age" value={""} onChange={() => { }} required={false} />
+                    <InputText text="อีเมล หรือ เบอร์โทรศัพท์" name="email" value={""} onChange={() => { }} required={false} />
+                    <InputText text="อาชีพ (ไม่บังคับ)" name="job" value={""} onChange={() => { }} required={false} />
+                </form>
                 <div className='flex flex-row w-full justify-between'>
                     <button className='btn w-[30%] h-[44px] rounded-full bg-[#E0E0E0] text-white' onClick={handlePrevPage}>ย้อนกลับ</button>
                     <button className='btn w-[30%] h-[44px] rounded-full bg-[#356CA8] text-white' onClick={handleNextPage}>ถัดไป</button>

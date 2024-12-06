@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PersonalInformation from './PersonalInformation';
 import ConsentPage from './ConsentPage';
 import AssistIntroPage from './AssistIntroPage';
@@ -6,7 +6,7 @@ import AssistSubstanct from './AssistSubstanct';
 
 
 const Assist = () => {
-    const [page, setPage] = useState<number>(1);
+    const [page, setPage] = useState<number>(4);
     const handleNextPage = () => {
         setPage(page + 1);
     }
