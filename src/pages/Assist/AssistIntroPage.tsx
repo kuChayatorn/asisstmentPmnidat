@@ -1,12 +1,12 @@
-import SmileIcon from '/Smiley.svg';
-import { Link } from 'react-router-dom';
 import { HiSpeakerWave } from "react-icons/hi2";
-import AvatarChat from '../components/AvatarChat';
+import AvatarChat from '../../components/AvatarChat';
+import { assisTestResultType } from "../../utils/type";
 interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
+    handleAssisResult: (result: assisTestResultType) => void
 }
-const AssistIntroPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) => {
+const AssistIntroPage = ({ handleNextPage, handlePrevPage, handleAssisResult }: ConsentPageProps) => {
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] h-full flex-col gap-[16px] pt-14 justify-center items-center z-[1]'>

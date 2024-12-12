@@ -1,15 +1,16 @@
-import React from 'react'
+import { assisTestResultType } from '../../utils/type';
 import SmileIcon from '/Smiley.svg';
 import { Link } from 'react-router-dom';
 
 interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
+    handleAssisResult: (result: assisTestResultType) => void
 }
 
 
 
-const ConsentPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) => {
+const ConsentPage = ({ handleNextPage, handlePrevPage, handleAssisResult }: ConsentPageProps) => {
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] flex-col gap-[16px] pt-14'>

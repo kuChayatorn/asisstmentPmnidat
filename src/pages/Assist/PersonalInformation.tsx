@@ -1,14 +1,22 @@
 import React from 'react'
 import SmileIcon from '/Smiley.svg';
-import InputText from '../components/InputText';
-import InputOptions from '../components/InputOptions';
+import InputText from '../../components/InputText';
+import InputOptions from '../../components/InputOptions';
+import { assisTestResultType } from '../../utils/type';
 
 interface PersonalInformationPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
+    handleAssisResult: (result: any) => void
 }
 
-const PersonalInformation = ({ handleNextPage, handlePrevPage }: PersonalInformationPageProps) => {
+const PersonalInformation = ({ handleNextPage, handlePrevPage, handleAssisResult }: PersonalInformationPageProps) => {
+
+    const handleTextChange = (e: any) => {
+        const { name, value } = e.target;
+        handleAssisResult({ [name]: value });
+    }
+
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] flex-col gap-[16px] pt-14'>

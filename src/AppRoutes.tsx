@@ -1,7 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
-import ConsentPage from "./pages/ConsentPage"
-import PersonalInformation from "./pages/PersonalInformation"
 import Assist from "./pages/Assist"
 
 const AppRoutes = () => {
