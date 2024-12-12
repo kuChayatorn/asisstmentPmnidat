@@ -1,6 +1,7 @@
 import React from 'react'
 import SmileIcon from '/Smiley.svg';
 import { Link } from 'react-router-dom';
+import { useUserStore } from '../utils/Store';
 
 interface ConsentPageProps {
     handleNextPage: () => void;
@@ -10,6 +11,13 @@ interface ConsentPageProps {
 
 
 const ConsentPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) => {
+    const setUserInformation = useUserStore((state) => state.setUserInformation);
+
+    const handleConsent = () => {
+        setUserInformation('isConsent', true);
+        handleNextPage();
+    };
+
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] flex-col gap-[16px] pt-14'>
@@ -48,9 +56,8 @@ const ConsentPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) => {
                                 ยกเลิก
                             </button>
                         </Link>
-                        <button className='btn' onClick={handleNextPage}> ยอมรับ</button>
+                        <button className='btn' onClick={handleConsent}> ยอมรับ</button>
                     </div>
-
                 </div>
                 <div className='flex w-[342px] flex-col items-center pt-10 z-[1]'>
                     <p className=' text-sm font-light leading-[22.4px] tracking-tight text-left decoration-slice text-[#356CA8]'>
