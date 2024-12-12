@@ -8,12 +8,13 @@ interface PersonalInformationPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
     handleAssisResult: (result: assisTestResultType) => void
+    assisResult: assisTestResultType | undefined | null
 }
 
 const AssistSubstanct = ({ handleNextPage, handlePrevPage, handleAssisResult }: PersonalInformationPageProps) => {
     const progressPercentage = 13;
     const selected = new Set();
-    
+
     const handleSubstanceSelected = (substance: string, state: boolean) => {
         if (state) {
             selected.add(substance);
@@ -22,7 +23,7 @@ const AssistSubstanct = ({ handleNextPage, handlePrevPage, handleAssisResult }: 
             selected.delete(substance);
         }
     }
-    
+
 
     return (
         <div className='h-min-screen w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] pb-'>

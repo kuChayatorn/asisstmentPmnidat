@@ -24,10 +24,10 @@ const Assist = () => {
     }
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0'>
-            {page === 1 && <ConsentPage handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} />}
-            {page === 2 && <PersonalInformation handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} />}
-            {page === 3 && <AssistIntroPage handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} />}
-            {page === 4 && <AssistSubstanct handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} />}
+            {page === 1 && <ConsentPage handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} assisResult={assisResult} />}
+            {page === 2 && <PersonalInformation handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} assisResult={assisResult} />}
+            {page === 3 && <AssistIntroPage handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} assisResult={assisResult} />}
+            {page === 4 && <AssistSubstanct handleNextPage={handleNextPage} handlePrevPage={handlePrevPage} handleAssisResult={handleAssisResult} assisResult={assisResult} />}
             {page === 5 && <SubStancesQuestionPage />}
         </div>
     )

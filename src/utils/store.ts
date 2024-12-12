@@ -1,19 +1,16 @@
-import {create} from 'zustand';
 
-interface SubstanceState {
-  usedSubstances: string[];
-  addSubstance: (substance: string) => void;
-  removeSubstance: (substance: string) => void;
-}
+import { create } from 'zustand';
+import { UserInformation } from './type';
 
-const useSubstanceStore = create<SubstanceState>((set) => ({
-  usedSubstances: [],
-  addSubstance: (substance: string) =>
-    set((state) => ({ usedSubstances: [...state.usedSubstances, substance] })),
-  removeSubstance: (substance: string) =>
-    set((state) => ({
-      usedSubstances: state.usedSubstances.filter((s) => s !== substance),
-    })),
+type UserStore = {
+    personalInformation: UserInformation;
+    setUserInformation: (key: keyof UserInformation, value: any) => void;
+};
+
+export const useUserStore = create<UserStore>((set) => ({
+    personalInformation: {} as UserInformation,
+    setUserInformation: (key, value) =>
+        set((state) => ({
+            personalInformation: { ...state.personalInformation, [key]: value },
+        })),
 }));
-
-export default useSubstanceStore;

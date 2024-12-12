@@ -1,28 +1,19 @@
 import { assisTestResultType } from '../../utils/type';
 import SmileIcon from '/Smiley.svg';
 import { Link } from 'react-router-dom';
-import { useUserStore } from '../utils/Store';
+import { useUserStore } from '../../utils/store';
 
 interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
     handleAssisResult: (result: assisTestResultType) => void
+    assisResult: assisTestResultType | undefined | null
 }
 
 
 
-<<<<<<< HEAD:src/pages/ConsentPage.tsx
-const ConsentPage = ({ handleNextPage, handlePrevPage }: ConsentPageProps) => {
-    const setUserInformation = useUserStore((state) => state.setUserInformation);
+const ConsentPage = ({ handleNextPage, handlePrevPage, handleAssisResult, assisResult }: ConsentPageProps) => {
 
-    const handleConsent = () => {
-        setUserInformation('isConsent', true);
-        handleNextPage();
-    };
-
-=======
-const ConsentPage = ({ handleNextPage, handlePrevPage, handleAssisResult }: ConsentPageProps) => {
->>>>>>> 1595393de6fd6e8b7b480308ea1920c67ea2e3b1:src/pages/Assist/ConsentPage.tsx
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] flex-col gap-[16px] pt-14'>
@@ -61,7 +52,7 @@ const ConsentPage = ({ handleNextPage, handlePrevPage, handleAssisResult }: Cons
                                 ยกเลิก
                             </button>
                         </Link>
-                        <button className='btn' onClick={handleConsent}> ยอมรับ</button>
+                        <button className='btn' onClick={() => { }}> ยอมรับ</button>
                     </div>
                 </div>
                 <div className='flex w-[342px] flex-col items-center pt-10 z-[1]'>

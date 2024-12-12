@@ -1,28 +1,22 @@
 import React, { useState } from 'react'
 import SmileIcon from '/Smiley.svg';
-<<<<<<< HEAD:src/pages/PersonalInformation.tsx
-import InputText from '../components/InputText';
-import InputOptions from '../components/InputOptions';
-import { useUserStore } from '../utils/Store';
-import { UserInformation } from '../utils/Type';
-=======
 import InputText from '../../components/InputText';
 import InputOptions from '../../components/InputOptions';
-import { assisTestResultType } from '../../utils/type';
->>>>>>> 1595393de6fd6e8b7b480308ea1920c67ea2e3b1:src/pages/Assist/PersonalInformation.tsx
+import { useUserStore } from '../../utils/store';
+import { assisTestResultType, userInformationType } from '../../utils/type';
 
 interface PersonalInformationPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
     handleAssisResult: (result: any) => void
+    assisResult: assisTestResultType | undefined | null
 }
 
-<<<<<<< HEAD:src/pages/PersonalInformation.tsx
-const PersonalInformationPage = ({ handleNextPage, handlePrevPage }: PersonalInformationPageProps) => {
+const PersonalInformationPage = ({ handleNextPage, handlePrevPage, handleAssisResult, assisResult }: PersonalInformationPageProps) => {
     const { personalInformation, setUserInformation } = useUserStore();
     const [error, setError] = useState<string | null>(null);
 
-    const handleInputChange = (key: keyof UserInformation, value: any) => {
+    const handleInputChange = (key: keyof userInformationType, value: any) => {
         setUserInformation(key, value);
         setError(null); // Clear error on user input
     };
@@ -34,14 +28,6 @@ const PersonalInformationPage = ({ handleNextPage, handlePrevPage }: PersonalInf
         }
         handleNextPage();
     };
-=======
-const PersonalInformation = ({ handleNextPage, handlePrevPage, handleAssisResult }: PersonalInformationPageProps) => {
-
-    const handleTextChange = (e: any) => {
-        const { name, value } = e.target;
-        handleAssisResult({ [name]: value });
-    }
->>>>>>> 1595393de6fd6e8b7b480308ea1920c67ea2e3b1:src/pages/Assist/PersonalInformation.tsx
 
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>

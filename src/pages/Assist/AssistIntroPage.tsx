@@ -5,8 +5,9 @@ interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
     handleAssisResult: (result: assisTestResultType) => void
+    assisResult: assisTestResultType | undefined | null
 }
-const AssistIntroPage = ({ handleNextPage, handlePrevPage, handleAssisResult }: ConsentPageProps) => {
+const AssistIntroPage = ({ handleNextPage, handlePrevPage, handleAssisResult, assisResult }: ConsentPageProps) => {
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>
             <div className='flex w-[342px] h-full flex-col gap-[16px] pt-14 justify-center items-center z-[1]'>
