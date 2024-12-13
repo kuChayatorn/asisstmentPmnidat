@@ -10,7 +10,12 @@ const SubStancesQuestionPage = () => {
     const usedSubstances: any[] = [];
     const [questionPageIndex, setQuestionPageIndex] = useState(1);
     const [curSubstance, setCurSubstance] = useState();
+    const nextSubstanceHandelr = () => {
 
+    }
+    const prepSubstanceHandelr = () => {
+
+    }
     return (
         <div>
             {usedSubstances.map((substance, index) => (

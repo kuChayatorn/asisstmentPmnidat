@@ -1,14 +1,13 @@
-
 import { create } from 'zustand';
-import { UserInformation } from './type';
+import { userInformationType } from './types';
 
 type UserStore = {
-    personalInformation: UserInformation;
-    setUserInformation: (key: keyof UserInformation, value: any) => void;
+    personalInformation: userInformationType;
+    setUserInformation: (key: keyof userInformationType, value: any) => void;
 };
 
 export const useUserStore = create<UserStore>((set) => ({
-    personalInformation: {} as UserInformation,
+    personalInformation: {} as userInformationType,
     setUserInformation: (key, value) =>
         set((state) => ({
             personalInformation: { ...state.personalInformation, [key]: value },

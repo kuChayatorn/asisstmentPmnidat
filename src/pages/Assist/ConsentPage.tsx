@@ -1,18 +1,18 @@
-import { assisTestResultType } from '../../utils/type';
+import { assisTestResultType } from '../../utils/types';
 import SmileIcon from '/Smiley.svg';
 import { Link } from 'react-router-dom';
-import { useUserStore } from '../../utils/store';
+import { useUserStore } from '../../utils/stores';
 
 interface ConsentPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
-    handleAssisResult: (result: assisTestResultType) => void
-    assisResult: assisTestResultType | undefined | null
+    setAssistResult: React.Dispatch<React.SetStateAction<assisTestResultType>>
+    assisResult: assisTestResultType
 }
 
 
 
-const ConsentPage = ({ handleNextPage, handlePrevPage, handleAssisResult, assisResult }: ConsentPageProps) => {
+const ConsentPage = ({ handleNextPage, handlePrevPage, setAssistResult, assisResult }: ConsentPageProps) => {
 
     return (
         <div className='h-lvh w-full flex justify-start items-center flex-col p-0 m-0 bg-gradient-to-t from-[#E6F7FF] to-[#FFFFFF] '>

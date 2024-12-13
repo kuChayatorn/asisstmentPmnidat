@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import SmileIcon from '/Smiley.svg';
 import InputText from '../../components/InputText';
 import InputOptions from '../../components/InputOptions';
-import { useUserStore } from '../../utils/store';
-import { assisTestResultType, userInformationType } from '../../utils/type';
+import { useUserStore } from '../../utils/stores';
+import { assisTestResultType, userInformationType } from '../../utils/types';
 
 interface PersonalInformationPageProps {
     handleNextPage: () => void;
     handlePrevPage: () => void;
-    handleAssisResult: (result: any) => void
-    assisResult: assisTestResultType | undefined | null
+    setAssistResult: React.Dispatch<React.SetStateAction<assisTestResultType>>
+    assisResult: assisTestResultType
 }
 
-const PersonalInformationPage = ({ handleNextPage, handlePrevPage, handleAssisResult, assisResult }: PersonalInformationPageProps) => {
+const PersonalInformationPage = ({ handleNextPage, handlePrevPage, setAssistResult, assisResult }: PersonalInformationPageProps) => {
     const { personalInformation, setUserInformation } = useUserStore();
     const [error, setError] = useState<string | null>(null);
 
